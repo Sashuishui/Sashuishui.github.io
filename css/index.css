@@ -1,0 +1,76 @@
+/*
+        整体布局
+        */
+        .body_div {
+            position: absolute;
+            left: 10px;
+        }
+
+        .index_img1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        /*
+        banner导航设置
+        */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #cf273c;
+        }
+        
+        li {
+            float: left;
+            display: inline;
+        }
+        
+        li a {
+            display: block;
+            color: #eb4035;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        
+        li a.active {
+            color: white;
+            background-color: #be0f2d;
+        }
+
+        /*
+        banner导航及新闻定位
+        */
+        .banner_left {
+            position: absolute;
+            width: 300px;
+   		    height: 100px;
+            top: 490px;
+            left: 0px;
+        }
+        .banner_right {
+            position: absolute;
+            width: 1600px;
+   		    height: 100px;
+            left: 300px;
+            top: 490px;
+        }
+        .marquee_p1 {
+            font-size: 18px;
+            color: white;
+            height: 49px;
+            line-height: 49px;
+        }
+        .content {
+            position: absolute;
+            width: 300px;
+   		    height: 100px;
+            top: 536px;
+            left: 0px;
+        }

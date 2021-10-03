@@ -1,0 +1,10 @@
+@charset "utf-8";
+body{padding:0;margin:0;font:normal 12px/180% \5FAE\8F6F\96C5\9ED1;color:#333;text-align:center;background:url(images/bg01.jpg);}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{margin:0;padding:0;}
+div{margin:0 auto;text-align:left;font:normal 12px/180% \5FAE\8F6F\96C5\9ED1;}
+a:link,a:visited{color:#333;text-decoration:none;}
+a:hover{color:#c00;text-decoration:underline;}
+img{border:none;}
+ol,ul,li{list-style:none;} 
+em,i{font-style:normal;}
+html, body{position: relative;height: 100%;}
