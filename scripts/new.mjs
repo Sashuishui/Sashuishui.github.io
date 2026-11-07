@@ -1,19 +1,25 @@
 #!/usr/bin/env node
-// 新建一篇文章：npm run new "标题" --tags 随笔,技术
+// 新建一篇文章：
+//   npm run new "今天的标题"
+//   npm run new "今天的标题" 随笔,读书
+//
+// 说明：npm 会截走 --tags 这类参数，所以标签直接跟在后边，不加 flag。
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
-const args = process.argv.slice(2);
+const args = process.argv.slice(2).filter((a) => a !== '--');
 
-const tagIndex = args.findIndex((a) => a === '--tags' || a === '-t');
-let title = args.filter((_, i) => i !== tagIndex && i !== tagIndex + 1).join(' ').trim();
-const tags = tagIndex > -1 && args[tagIndex + 1]
-  ? args[tagIndex + 1].split(/[,，]/).map((t) => t.trim()).filter(Boolean)
-  : [];
+const title = (args[0] ?? '').trim();
+const tags = args
+  .slice(1)
+  .join(',')
+  .split(/[,，]/)
+  .map((t) => t.trim())
+  .filter(Boolean);
 
 if (!title) {
-  console.log('用法: npm run new "文章标题" --tags 标签1,标签2');
+  console.log('用法: npm run new "文章标题" [标签1,标签2]');
   process.exit(1);
 }
 
