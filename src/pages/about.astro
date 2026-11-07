@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+---
+
+<Base title="关于">
+  <h1 class="page-title">关于</h1>
+  <div class="prose" style="margin-top: 28px;">
+    <p>我是 {SITE.author}，这里是我的个人博客。</p>
+    <p>平时会记一些技术笔记、读书摘录，还有做东西过程中的想法。写得不深，但都是自己真的用过、想过的东西。</p>
+    <p>想联系我，可以发邮件到 <a href="mailto:you@example.com">you@example.com</a>，或者去 <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> 找我。</p>
+  </div>
+</Base>

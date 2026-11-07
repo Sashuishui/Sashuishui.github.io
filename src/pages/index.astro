@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { SITE } from '../config';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft || import.meta.env.DEV)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Base>
+  <section class="intro">
+    <h1>{SITE.title}</h1>
+    <p>{SITE.intro}</p>
+  </section>
+
+  <PostList posts={posts} />
+</Base>
