@@ -5,7 +5,7 @@
 ## 日常三步
 
 ```bash
-npm run new "今天的标题" --tags 随笔,读书   # 1. 新建文章
+npm run new "今天的标题" 随笔,读书          # 1. 新建文章（标签可省略）
 # 写内容，图片丢进提示的目录里
 npm run pub                                  # 2. 发布（commit + push，GitHub 自动部署）
 ```
